@@ -8,10 +8,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class InCategoryController : ControllerBase
     {
         [HttpGet]
-        public CategoriesModel GetCategories()
+        public CategoriesModel GetCategories(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetCategories().Result;
+            return client.GetCategories(Word).Result;
         }
     }
 }

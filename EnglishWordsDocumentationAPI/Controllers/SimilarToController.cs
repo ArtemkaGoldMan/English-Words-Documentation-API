@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class SimilarToController : Controller
     {
         [HttpGet]
-        public SimilarToModel GetSimilarTo()
+        public SimilarToModel GetSimilarTo(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetSimilarTo().Result;
+            return client.GetSimilarTo(Word).Result;
         }
     }
 }

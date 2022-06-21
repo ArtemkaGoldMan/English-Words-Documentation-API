@@ -10,10 +10,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     {
         [HttpGet]
 
-        public AntonymsModel GetAntonyms()
+        public AntonymsModel GetAntonyms(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetAntonyms().Result;
+            return client.GetAntonyms(Word).Result;
         }
 
     }

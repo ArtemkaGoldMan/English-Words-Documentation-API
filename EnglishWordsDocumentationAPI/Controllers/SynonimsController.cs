@@ -10,10 +10,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     {
         [HttpGet]
 
-        public SynonymsModel GetSynonyms()
+        public SynonymsModel GetSynonyms(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetSynonyms().Result;
+            return client.GetSynonyms(Word).Result;
         }
     }
 }

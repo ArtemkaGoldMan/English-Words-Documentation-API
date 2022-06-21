@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class TypeOfController : ControllerBase
     {
         [HttpGet]
-        public TypeOfModel GetTypeOf()
+        public TypeOfModel GetTypeOf(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetTypeOf().Result;
+            return client.GetTypeOf(Word).Result;
         }
     }
 }

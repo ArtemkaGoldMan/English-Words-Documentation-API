@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class SyllablesController : ControllerBase//не пахає
     {
         [HttpGet]
-        public SyllablesModel GetSyllables()
+        public SyllablesModel GetSyllables(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetSyllables().Result;
+            return client.GetSyllables(Word).Result;
         }
     }
 }

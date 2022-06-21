@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class ExamplesController : ControllerBase
     {
         [HttpGet]
-        public ExamplesModel GetExamples()
+        public ExamplesModel GetExamples(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetExamples().Result;
+            return client.GetExamples(Word).Result;
         }
     }
 }

@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class UsingwithController : ControllerBase
     {
         [HttpGet]
-        public UsingWithModel GetUsingWith()
+        public UsingWithModel GetUsingWith(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetUsingWith().Result;
+            return client.GetUsingWith(Word).Result;
         }
     }
 }

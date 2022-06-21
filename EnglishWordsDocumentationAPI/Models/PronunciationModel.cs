@@ -2,10 +2,10 @@
 {
     public class PronunciationModel
     {
-        public Pronunciation pronunciation { get; set; }
+        public Pronunciations pronunciation { get; set; }
     }
 
-    public class Pronunciation
+    public class Pronunciations
     {
         public string all { get; set; }
         public string noun { get; set; }

@@ -9,10 +9,10 @@ namespace EnglishWordsDocumentationAPI.Controllers
     public class PronunciationController : ControllerBase
     {
         [HttpGet]
-        public PronunciationModel GetPronunciation()
+        public PronunciationModel GetPronunciation(string Word)
         {
             WordsDocumentationClient client = new WordsDocumentationClient();
-            return client.GetPronunciation().Result;
+            return client.GetPronunciation(Word).Result;
         }
     }
 }
