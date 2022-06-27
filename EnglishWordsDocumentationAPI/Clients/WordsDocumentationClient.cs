@@ -1,4 +1,5 @@
 ﻿using EnglishWordsDocumentationAPI.Models;
+using EnglishWordsDocumentationAPI.Constant;
 using Newtonsoft.Json;
 
 namespace EnglishWordsDocumentationAPI.Clients
@@ -11,7 +12,7 @@ namespace EnglishWordsDocumentationAPI.Clients
 
         public WordsDocumentationClient()
         {
-            _address = Constatnts.adress;
+            _address = Constants.adress;
 
             _client = new HttpClient();
             _client.BaseAddress = new Uri(_address);

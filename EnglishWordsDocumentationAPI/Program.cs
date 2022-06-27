@@ -1,4 +1,3 @@
-using EnglishWordsDocumentationAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
